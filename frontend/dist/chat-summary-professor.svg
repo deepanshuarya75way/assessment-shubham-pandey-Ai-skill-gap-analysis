@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#111827"/>
+  <rect x="35" y="35" width="1130" height="650" rx="22" fill="#1f2937" stroke="#374151"/>
+  <rect x="35" y="35" width="1130" height="70" rx="22" fill="#0f1b35"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff">Project Discussion Summary</text>
+
+  <rect x="80" y="145" width="500" height="95" rx="18" fill="#374151"/>
+  <text x="115" y="180" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Student:</text>
+  <text x="115" y="210" font-family="Arial, sans-serif" font-size="16" fill="#e5e7eb">Create an AI/ML web app for interview</text>
+  <text x="115" y="232" font-family="Arial, sans-serif" font-size="16" fill="#e5e7eb">intelligence and skill gap analysis.</text>
+
+  <rect x="260" y="275" width="860" height="245" rx="18" fill="#f9fafb"/>
+  <text x="300" y="315" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#0f1b35">Professor-style explanation:</text>
+  <text x="300" y="352" font-family="Arial, sans-serif" font-size="17" fill="#111827">This project solves a real placement problem. Students often do not know</text>
+  <text x="300" y="378" font-family="Arial, sans-serif" font-size="17" fill="#111827">whether they are industry-ready, and recruiters spend time in first-level</text>
+  <text x="300" y="404" font-family="Arial, sans-serif" font-size="17" fill="#111827">screening. The platform analyzes resumes, conducts adaptive interviews,</text>
+  <text x="300" y="430" font-family="Arial, sans-serif" font-size="17" fill="#111827">detects skill gaps, and recommends a personalized learning roadmap.</text>
+  <text x="300" y="470" font-family="Arial, sans-serif" font-size="17" font-weight="800" fill="#047857">Research areas: NLP, ML, adaptive assessment, recommendation systems.</text>
+
+  <rect x="80" y="555" width="1040" height="85" rx="16" fill="#ecfdf5" stroke="#10b981"/>
+  <text x="110" y="590" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#065f46">Convincing ending line:</text>
+  <text x="110" y="620" font-family="Arial, sans-serif" font-size="18" fill="#064e3b">This project is not just a resume parser; it acts as an intelligent career assistant that evaluates, guides, and improves candidate readiness using AI.</text>
+</svg>
