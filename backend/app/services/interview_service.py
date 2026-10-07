@@ -4,7 +4,7 @@ import os
 import re
 from typing import Any
 from .question import QUESTIONS
-# from app.data import JOB_ROLES, QUESTION_BANK
+from app.data import JOB_ROLES, QUESTION_BANK
 
 
 STRUCTURE_WORDS = {
