@@ -1,0 +1,15 @@
+node_modules/
+**/node_modules/
+.vite/
+
+__pycache__/
+**/__pycache__/
+*.puc
+venv/
+.venv/
+env/
+
+.env
+.env.local
+
+*.log
