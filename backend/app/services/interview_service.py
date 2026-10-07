@@ -47,7 +47,7 @@ def generate_questions(
     missing_skills: list[str],
     resume_text: str | None = None,
     projects: list[str] | None = None,
-) -> list[Dict[]]:
+) -> list[dict]:
     ai_questions = _generate_questions_with_ai(
         target_role=target_role,
         candidate_skills=candidate_skills,
