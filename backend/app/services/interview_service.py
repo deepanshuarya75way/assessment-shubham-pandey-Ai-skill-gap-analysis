@@ -1,8 +1,10 @@
+from ast import Dict
 import json
 import os
 import re
-
-from app.data import JOB_ROLES, QUESTION_BANK
+from typing import Any
+from .question import QUESTIONS
+# from app.data import JOB_ROLES, QUESTION_BANK
 
 
 STRUCTURE_WORDS = {
@@ -19,7 +21,25 @@ STRUCTURE_WORDS = {
 }
 
 DIFFICULTIES = {"Beginner", "Medium", "Hard", "Practical"}
+def get_static_question(target_role: str, difficulty: str ="beginner", asked_questions: list[str] | None = None):
+    if asked_questions is None:
+        asked_questions = []
 
+    for question in QUESTIONS:
+        role_str = str(question.get('role', '')).lower()
+        diff_str = str(question.get('difficulty', '')).lower()
+        role_match = role_str == target_role.lower()
+        diff_match = diff_str == difficulty.lower()
+        if role_match and diff_match:
+            q_text = question.get("question") or question.get("questions")
+            if q_text not in asked_questions:
+                return{
+                    "source": "question",
+                    "questions": q_text,
+                    "skills": question.get("skill", []),
+                    "difficulty": question.get("difficulty")
+                }
+    return None
 
 def generate_questions(
     target_role: str,
@@ -27,7 +47,7 @@ def generate_questions(
     missing_skills: list[str],
     resume_text: str | None = None,
     projects: list[str] | None = None,
-) -> list[dict]:
+) -> list[Dict[]]:
     ai_questions = _generate_questions_with_ai(
         target_role=target_role,
         candidate_skills=candidate_skills,
@@ -38,13 +58,18 @@ def generate_questions(
     if ai_questions:
         return ai_questions
 
-    return _generate_questions_fallback(
+    fallback_res= _generate_questions_fallback(
         target_role=target_role,
         candidate_skills=candidate_skills,
         missing_skills=missing_skills,
         resume_text=resume_text,
         projects=projects,
     )
+    if isinstance(fallback_res, list):
+        return fallback_res
+    elif fallback_res:
+        return[fallback_res]
+    return []
 
 
 def evaluate_answers(
